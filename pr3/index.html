@@ -190,14 +190,14 @@ Driver_doc('7', '6', 'num7', 'type7', '1996-01-1').save()
 &lt;Driver_doc: Driver_doc object (4)&gt;
 </code></pre>
 <p>● Вывести всех владельцев красных машин (или любого другого цвета, который у вас присутствует):</p>
-<pre><code>&gt;&gt;&gt; Ownership.objects.filter(id_car__color=&quot;color&quot;) 
-&lt;QuerySet [&lt;Ownership: Ownership object (1)&gt;, &lt;Ownership: Ownership object (2)&gt;, &lt;Ownership: Ownership object (3)&gt;, &lt;Ownership: Ownership object (4)&gt;, &lt;Ownership: Ownership obje
-ct (5)&gt;, &lt;Ownership: Ownership object (6)&gt;]&gt;
+<pre><code>&gt;&gt;&gt; Transport_owner.objects.filter(ownership__id_car__color='color')
+&lt;QuerySet [&lt;Transport_owner: Transport_owner object (1)&gt;, &lt;Transport_owner: Transport_owner object (2)&gt;, &lt;Transport_owner: Transport_owner object (3)&gt;, &lt;Transport_owner: Transpo
+rt_owner object (4)&gt;, &lt;Transport_owner: Transport_owner object (5)&gt;, &lt;Transport_owner: Transport_owner object (6)&gt;]&gt;
 </code></pre>
 <p>● Найти всех владельцев, чей год владения машиной начинается с 2010 (или любой другой год, который присутствует у вас в базе):</p>
-<pre><code>&gt;&gt;&gt; Ownership.objects.filter(date_start=&quot;2000-01-01&quot;) 
-&lt;QuerySet [&lt;Ownership: Ownership object (1)&gt;, &lt;Ownership: Ownership object (2)&gt;, &lt;Ownership: Ownership object (3)&gt;, &lt;Ownership: Ownership object (4)&gt;, &lt;Ownership: Ownership obje
-ct (5)&gt;, &lt;Ownership: Ownership object (6)&gt;]&gt;
+<pre><code>&gt;&gt;&gt; Transport_owner.objects.filter(ownership__date_start='2000-01-01') 
+&lt;QuerySet [&lt;Transport_owner: Transport_owner object (1)&gt;, &lt;Transport_owner: Transport_owner object (2)&gt;, &lt;Transport_owner: Transport_owner object (3)&gt;, &lt;Transport_owner: Transpo
+rt_owner object (4)&gt;, &lt;Transport_owner: Transport_owner object (5)&gt;, &lt;Transport_owner: Transport_owner object (6)&gt;]&gt;
 </code></pre>
 <p>===========================================================================</p>
 <h2 id="3">Практическое задание 3:</h2>
