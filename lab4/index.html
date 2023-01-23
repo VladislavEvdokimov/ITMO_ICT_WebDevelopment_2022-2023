@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Лаба №4 - Документация</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Документация</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../lab1/" class="nav-link">Лаба №1</a>
+                            </li>
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Лаба №2</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../pr3/" class="nav-link">Практика 3.1</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../easteregg.html" class="nav-link">Лаба №3</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Лаба №4</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../easteregg.html" class="nav-link">Пасхалочка</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../easteregg.html" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../easteregg.html" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#no4-33421" class="nav-link">Лабораторная работа №4. Евдокимов Владислав К33421</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Описание</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#appvue" class="nav-link">App.vue:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#signupvue" class="nav-link">SignUp.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#signinvue" class="nav-link">SignIn.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#loginvue" class="nav-link">LogIn.vue:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#accountdetailvue" class="nav-link">AccountDetail.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#aboutvue" class="nav-link">About.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#navdrawervue" class="nav-link">NavDrawer.vue:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#accountdetailscardvue" class="nav-link">AccountDetailsCard.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#chosenmaterialstablecardvue" class="nav-link">ChosenMaterialsTableCard.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#chosenservicestablecardvue" class="nav-link">ChosenServicesTableCard.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#clienttablecardvue" class="nav-link">ClientTableCard.vue:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#executortablecardvue" class="nav-link">ExecutorTableCard.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#invoicetablecardvue" class="nav-link">InvoiceTableCard.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#materialspltablecardvue" class="nav-link">MaterialsPLTableCard.vue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="no4-33421">Лабораторная работа №4. Евдокимов Владислав К33421</h1>
+<h2 id="_1">Описание</h2>
+<pre><code>      Создание фронтенда
+</code></pre>
+<p>Цель: создать графическое представление сайта (фронтенда) с коммуникацией с бэкэндом по API.</p>
+<h2 id="appvue">App.vue:</h2>
+<pre><code>&lt;template&gt;
+ &lt;v-app&gt;
+   &lt;v-app-bar
+     app
+     color=&quot;gray&quot;
+     dark
+   &gt;
+     &lt;div class=&quot;d-flex align-center&quot;&gt;
+       &lt;h1 class=&quot;headline&quot;&gt;Рекламное агентство &lt;/h1&gt;
+     &lt;/div&gt;
+
+     &lt;v-spacer&gt;&lt;/v-spacer&gt;
+
+     &lt;v-btn v-if='auth' icon @click='AccountDetails'&gt;
+       &lt;v-icon&gt;mdi-account&lt;/v-icon&gt;
+     &lt;/v-btn&gt;
+     &lt;div class=&quot;mx-2&quot;&gt;&lt;/div&gt;
+
+     &lt;v-btn icon @click='goHome'&gt;
+       &lt;v-icon&gt;mdi-home&lt;/v-icon&gt;
+     &lt;/v-btn&gt;
+     &lt;div class=&quot;mx-2&quot;&gt;&lt;/div&gt;
+
+     &lt;v-btn icon&gt;
+       &lt;v-icon v-if='!auth' @click='login' &gt;mdi-login-variant&lt;/v-icon&gt;
+       &lt;v-icon v-if='auth' @click='logout' &gt;mdi-logout-variant&lt;/v-icon&gt;
+     &lt;/v-btn&gt;
+
+   &lt;/v-app-bar&gt;
+
+   &lt;v-main class=&quot;d-flex align-center text-center&quot;&gt;
+     &lt;router-view /&gt;
+   &lt;/v-main&gt;
+ &lt;/v-app&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery'
+export default {
+  name: 'App',
+  created () {
+    if (localStorage.getItem('token')) {
+      $.ajaxSetup({
+        headers: {
+          Authorization: 'Token ' + localStorage.getItem('token')
+        }
+      })
+    }
+  },
+
+  computed: {
+    auth () {
+      return !!localStorage.getItem('token');
+    }
+  },
+
+  methods: {
+    login () {
+      this.$router.push({ name: 'signin' })
+    },
+    logout () {
+      localStorage.removeItem('token')
+      window.location = '/'
+    },
+    goHome () {
+      this.$router.push({ name: 'about' })
+    },
+    AccountDetails () {
+      this.$router.push({ name: 'accountdetails' })
+    }
+  },
+
+  data: () =&gt; ({
+    //
+  })
+}
+&lt;/script&gt;
+
+</code></pre>
+<h2 id="signupvue">SignUp.vue</h2>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;signup&quot;&gt;
+    &lt;v-form
+      @submit.prevent=&quot;signUp&quot;
+      ref=&quot;signUpForm&quot;
+      class=&quot;my-2&quot;
+    &gt;
+      &lt;v-row&gt;
+        &lt;v-col cols=&quot;3&quot; class=&quot;mx-auto&quot;&gt;
+          &lt;v-text-field
+            label=&quot;Введите имя&quot;
+            v-model=&quot;signUpForm.first_name&quot;
+            :rules=&quot;rules.required&quot;
+          /&gt;
+          &lt;v-text-field
+            label=&quot;Введите фамилию&quot;
+            v-model=&quot;signUpForm.last_name&quot;
+            :rules=&quot;rules.required&quot;
+          /&gt;
+          &lt;v-select
+            :items=&quot;roles&quot;
+            label=&quot;Выберите роль&quot;
+            v-model=&quot;signUpForm.role&quot;
+            :rules=&quot;rules.required&quot;
+          &gt;&lt;/v-select&gt;
+          &lt;v-text-field
+            label=&quot;Введите номер телефона&quot;
+            v-model=&quot;signUpForm.tel&quot;
+            :rules=&quot;rules.required&quot;
+          /&gt;
+          &lt;v-text-field
+            label=&quot;Введите email&quot;
+            v-model=&quot;signUpForm.email&quot;
+            :rules=&quot;rules.required&quot;
+          /&gt;
+          &lt;v-text-field
+            label=&quot;Введите имя пользователя&quot;
+            v-model=&quot;signUpForm.username&quot;
+            :rules=&quot;rules.required&quot;
+          /&gt;
+          &lt;v-text-field
+            label=&quot;Введите пароль&quot;
+            v-model=&quot;signUpForm.password&quot;
+            type=&quot;password&quot;
+            :rules=&quot;[rules.required, rules.counter9]&quot;
+          /&gt;
+          &lt;v-btn type=&quot;submit&quot; color=&quot;primary&quot; dark&gt;Зарегистрироваться&lt;/v-btn&gt;
+          &lt;p class=&quot;mt-5&quot;&gt;Уже зарегистрированы? &lt;router-link to=&quot;/signin&quot;&gt;Войти&lt;/router-link&gt;&lt;/p&gt;
+        &lt;/v-col&gt;
+      &lt;/v-row&gt;
+    &lt;/v-form&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'SignUp',
+
+  data: () =&gt; ({
+    signUpForm: {
+      first_name: '',
+      last_name: '',
+      role: '',
+      tel: '',
+      email: '',
+      username: '',
+      password: ''
+    },
+
+    roles: ['Администратор', 'Менеджер', 'Бухгалтер'],
+    rules: {
+      required: value =&gt; !!value || 'Required.',
+      counter9: value =&gt; value.length &lt;= 9 || 'Min 9 characters'
+    }
+
+  }),
+
+  methods: {
+    async signUp () {
+      if (this.signUpForm.role === 'Администратор') {
+        this.signUpForm.role = 'Администратор'
+      } else if (this.signUpForm.role === 'Менеджер') {
+        this.signUpForm.role = 'Менеджер'
+      } else if (this.signUpForm.role === 'Бухгалтер') {
+        this.signUpForm.role = 'Бухгалтер'
+      }
+      try {
+        const response = await this.axios
+          .post('http://127.0.0.1:8000/auth/users/', this.signUpForm)
+
+        if (response.status !== 201) {
+          throw new Error(response.status)
+        }
+        this.$refs.signUpForm.reset()
+        await this.$router.push({ name: 'signin' })
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h2 id="signinvue">SignIn.vue</h2>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;signin&quot;&gt;
+    &lt;v-form
+      @submit.prevent=&quot;signIn&quot;
+      ref=&quot;signInForm&quot;
+      class=&quot;my-2&quot;
+    &gt;
+      &lt;v-row&gt;
+        &lt;v-col cols=&quot;3&quot; class=&quot;mx-auto&quot;&gt;
+          &lt;v-text-field
+            label=&quot;Введите имя пользователя&quot;
+            v-model=&quot;signInForm.username&quot;
+          /&gt;
+          &lt;v-text-field
+            label=&quot;Введите пароль&quot;
+            v-model=&quot;signInForm.password&quot;
+            type=&quot;password&quot;
+          /&gt;
+          &lt;v-btn type=&quot;submit&quot; color=&quot;primary&quot; dark&gt;Войти&lt;/v-btn&gt;
+
+          &lt;p class=&quot;mt-5&quot;&gt;Ещё нет аккаунта? &lt;router-link to=&quot;/signup&quot;&gt;Зарегистрироваться&lt;/router-link&gt;&lt;/p&gt;
+        &lt;/v-col&gt;
+      &lt;/v-row&gt;
+    &lt;/v-form&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'SignIn',
+
+  data: () =&gt; ({
+    signInForm: {
+      username: '',
+      password: ''
+    }
+  }),
+
+  methods: {
+    async signIn () {
+      try {
+        const response = await this.axios
+          .post('http://127.0.0.1:8000/auth/token/login/', this.signInForm)
+
+        console.log('SIGN IN RESPONSE', response)
+
+
+        this.$refs.signInForm.reset()
+
+        localStorage.setItem('token', response.data.auth_token)
+
+        window.location = '/'
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h2 id="loginvue">LogIn.vue:</h2>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;input v-model=&quot;login&quot; type=&quot;text&quot; placeholder=&quot;Логин&quot;/&gt;
+        &lt;input v-model=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Пароль&quot;/&gt;
+        &lt;button @click=&quot;setLogin&quot;&gt;Войти&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery'
+
+export default {
+  name: 'Login',
+  data () {
+    return {
+      login: '',
+      password: ''
+    }
+  },
+  methods: {
+    setLogin () {
+      $.ajax({
+        url: 'http://127.0.0.1:8000/auth/token/login/',
+        type: 'POST',
+        data: {
+          username: this.login,
+          password: this.password
+        },
+        success: (response) =&gt; {
+          alert('Спасибо что Вы с нами')
+          sessionStorage.setItem('auth_token', response.data.attributes.auth_token)
+          this.$router.push({ name: 'home' })
+        },
+        error: (response) =&gt; {
+          if (response.status === 400) {
+            alert('Логин или пароль не верен')
+          }
+        }
+      })
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre>
+<h2 id="accountdetailvue">AccountDetail.vue</h2>
+<pre><code>&lt;template&gt;
+ &lt;v-container&gt;
+   &lt;v-row&gt;
+     &lt;v-col cols=&quot;2&quot;&gt;
+       &lt;v-card&gt;
+         &lt;nav-drawer/&gt;
+       &lt;/v-card&gt;
+     &lt;/v-col&gt;
+     &lt;v-col cols=&quot;10&quot;&gt;
+       &lt;AccountDetailsCard/&gt;
+     &lt;/v-col&gt;
+    &lt;/v-row&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import NavDrawer from '@/components/NavDrawer'
+import AccountDetailsCard from '@/components/AccountDetailsCard'
+export default {
+  name: 'AccountDetails',
+  components: {
+    NavDrawer,
+    AccountDetailsCard
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h2 id="aboutvue">About.vue</h2>
+<pre><code>&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;v-row&gt;
+      &lt;v-col cols=&quot;2&quot;&gt;
+        &lt;v-card&gt;
+          &lt;nav-drawer v-if='auth'/&gt;
+        &lt;/v-card&gt;
+      &lt;/v-col&gt;
+
+      &lt;v-col cols=&quot;10&quot;&gt;
+        &lt;v-card&gt;
+          &lt;h3&gt;Программная система учёта &quot;Луч-агенство&quot;&lt;/h3&gt;
+        &lt;/v-card&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import NavDrawer from '@/components/NavDrawer'
+export default {
+  name: 'About',
+  components: {
+    NavDrawer
+  },
+  computed: {
+    auth () {
+      return !!localStorage.getItem('token');
+    }
+  }
+}
+
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre>
+<h2 id="navdrawervue">NavDrawer.vue:</h2>
+<pre><code>&lt;template&gt;
+  &lt;v-card&gt;
+    &lt;v-navigation-drawer
+      floating
+      permanent
+      width=&quot;320&quot;
+    &gt;
+      &lt;v-list
+        dense
+        rounded
+      &gt;
+        &lt;v-list-item
+          v-for=&quot;item in items&quot;
+          :key=&quot;item.title&quot;
+          @click=item.link
+        &gt;
+          &lt;v-list-item-icon&gt;
+            &lt;v-icon&gt;{{ item.icon }}&lt;/v-icon&gt;
+          &lt;/v-list-item-icon&gt;
+           &lt;v-list-item-content&gt;
+            &lt;v-list-item-title&gt;{{ item.title }}&lt;/v-list-item-title&gt;
+          &lt;/v-list-item-content&gt;
+        &lt;/v-list-item&gt;
+      &lt;/v-list&gt;
+    &lt;/v-navigation-drawer&gt;
+  &lt;/v-card&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'NavDrawer',
+  data () {
+    return {
+      items: [
+        { title: 'Клиенты', icon: 'mdi-account', link: this.client },
+        { title: 'Прайс-лист на услуги', icon: 'mdi-format-list-bulleted', link: this.servicePL },
+        { title: 'Прайс-лист на материалы', icon: 'mdi-format-list-bulleted', link: this.materialsPL },
+        { title: 'Исполнители', icon: 'mdi-account-tie', link: this.executor },
+        { title: 'Заявки', icon: 'mdi-account-question', link: this.request },
+        { title: 'Выбранные услуги', icon: 'mdi-cart-arrow-down', link: this.chosenServices },
+        { title: 'Выбранные материалы', icon: 'mdi-cart-arrow-down', link: this.chosenMaterials },
+        { title: 'Рабочие группы', icon: 'mdi-account-group', link: this.workGroup },
+        { title: 'Счета на оплату', icon: 'mdi-cash', link: this.invoice },
+        { title: 'Платежные поручения', icon: 'mdi-cash-check', link: this.paymentOrder }
+      ]
+    }
+  },
+
+  methods: {
+    client () {
+      this.$router.push({ name: 'client' })
+    },
+    servicePL () {
+      this.$router.push({ name: 'servicepl' })
+    },
+    materialsPL () {
+      this.$router.push({ name: 'materialspl' })
+    },
+    executor () {
+      this.$router.push({ name: 'executor' })
+    },
+    request () {
+      this.$router.push({ name: 'request' })
+    },
+    chosenServices () {
+      this.$router.push({ name: 'chosenservices' })
+    },
+    chosenMaterials () {
+      this.$router.push({ name: 'chosenmaterials' })
+    },
+    workGroup () {
+      this.$router.push({ name: 'workgroup' })
+    },
+    invoice () {
+      this.$router.push({ name: 'invoice' })
+    },
+    paymentOrder () {
+      this.$router.push({ name: 'paymentorder' })
+    }
+  }
+}
+
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+
+</code></pre>
+<h2 id="accountdetailscardvue">AccountDetailsCard.vue</h2>
+<pre><code>&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;v-row&gt;
+      &lt;h1&gt;Изменение данных пользователя &quot;{{ EditedItem.username }}&quot;&lt;/h1&gt;
+      &lt;p&gt;&lt;/p&gt;
+    &lt;/v-row&gt;
+    &lt;v-row&gt;
+      &lt;v-text-field
+        v-model=&quot;EditedItem.first_name&quot;
+        label=&quot;Имя&quot;
+        required
+      &gt;&lt;/v-text-field&gt;
+    &lt;/v-row&gt;
+    &lt;v-row&gt;
+      &lt;v-text-field
+        v-model=&quot;EditedItem.last_name&quot;
+        label=&quot;Фамилия&quot;
+        required
+      &gt;&lt;/v-text-field&gt;
+    &lt;/v-row&gt;
+    &lt;v-row&gt;
+      &lt;v-text-field
+        v-model=&quot;EditedItem.tel&quot;
+        label=&quot;Телефон&quot;
+        required
+      &gt;&lt;/v-text-field&gt;
+    &lt;/v-row&gt;
+    &lt;v-row&gt;
+      &lt;v-text-field
+        v-model=&quot;EditedItem.role&quot;
+        label=&quot;Роль&quot;
+        required
+      &gt;&lt;/v-text-field&gt;
+    &lt;/v-row&gt;
+    &lt;v-btn
+      color=&quot;anchor&quot;
+      class=&quot;mr-4&quot;
+      @click=&quot;reset&quot;
+    &gt;
+      Отмена
+    &lt;/v-btn&gt;
+    &lt;v-btn
+      color=&quot;primary&quot;
+      class=&quot;mr-4&quot;
+      @click=&quot;ChangeAccountDetails&quot;
+    &gt;
+      Сохранить изменения
+    &lt;/v-btn&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data: () =&gt; ({
+    AccountDetails: [],
+    EditedItem: [],
+    data: {}
+  }),
+  created () {
+    this.GetAccountDetails()
+  },
+  methods: {
+    async GetAccountDetails () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/auth/users/me/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.AccountDetails = response.data
+        this.EditedItem = response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async ChangeAccountDetails () {
+      try {
+        const response = await this.axios
+          .patch('http://127.0.0.1:8000/auth/users/me/', JSON.stringify(this.EditedItem), { headers: { Authorization: 'Token ' + localStorage.getItem('token'), 'Content-Type': 'application/json' } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    reset () {
+      this.EditedItem = this.AccountDetails
+      window.location.reload()
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h2 id="chosenmaterialstablecardvue">ChosenMaterialsTableCard.vue</h2>
+<pre><code>&lt;template&gt;
+  &lt;v-data-table
+    :headers=&quot;headers&quot;
+    :items=&quot;chosenmaterials&quot;
+    class=&quot;elevation-1&quot;
+  &gt;
+    &lt;template v-slot:top&gt;
+      &lt;v-toolbar
+        flat
+      &gt;
+        &lt;v-toolbar-title&gt;Выбранные материалы&lt;/v-toolbar-title&gt;
+        &lt;v-divider
+          class=&quot;mx-4&quot;
+          inset
+          vertical
+        &gt;&lt;/v-divider&gt;
+        &lt;v-spacer&gt;&lt;/v-spacer&gt;
+        &lt;v-dialog
+          v-model=&quot;dialog&quot;
+          max-width=&quot;500px&quot;
+        &gt;
+          &lt;template v-slot:activator=&quot;{ on, attrs }&quot;&gt;
+            &lt;v-btn
+              color=&quot;primary&quot;
+              dark
+              class=&quot;mb-2&quot;
+              v-bind=&quot;attrs&quot;
+              v-on=&quot;on&quot;
+            &gt;
+              Добавить выбранные материалы
+            &lt;/v-btn&gt;
+          &lt;/template&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title&gt;
+              &lt;span class=&quot;headline&quot;&gt;{{ chosenmaterialsForm }}&lt;/span&gt;
+            &lt;/v-card-title&gt;
+
+            &lt;v-card-text&gt;
+              &lt;v-container&gt;
+                &lt;v-row&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-select
+                      :items=materials
+                      item-text=&quot;title&quot;
+                      item-value=&quot;id&quot;
+                      label=&quot;Материал&quot;
+                      v-model=&quot;editedItem.material&quot;
+                      :rules=&quot;rules.requireds&quot;
+                    &gt;&lt;/v-select&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-select
+                      :items=requests
+                      item-text=&quot;id&quot;
+                      item-value=&quot;editedItem.req&quot;
+                      label=&quot;Заявка&quot;
+                      v-model=&quot;editedItem.req&quot;
+                      :rules=&quot;rules.requireds&quot;
+                    &gt;&lt;/v-select&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.total_cost&quot;
+                      label=&quot;Стоимость&quot;
+                      type=&quot;number&quot;
+                      :rules=&quot;[rules.required, rules.counter30]&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.amount&quot;
+                      label=&quot;Количество&quot;
+                      :rules=&quot;rules.required&quot;
+                      type=&quot;number&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                &lt;/v-row&gt;
+              &lt;/v-container&gt;
+            &lt;/v-card-text&gt;
+
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;close&quot;
+              &gt;
+                Отмена
+              &lt;/v-btn&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;save&quot;
+              &gt;
+                Сохранить
+              &lt;/v-btn&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+        &lt;v-dialog v-model=&quot;dialogDelete&quot; max-width=&quot;500px&quot;&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title class=&quot;headline&quot;&gt;Вы уверены, что хотите удалить запись о выбранных материалах?&lt;/v-card-title&gt;
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;closeDelete&quot;&gt;Отмена&lt;/v-btn&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;DeleteChosenMaterials&quot;&gt;Подтвердить&lt;/v-btn&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+      &lt;/v-toolbar&gt;
+    &lt;/template&gt;
+    &lt;template v-slot:[`item.actions`]=&quot;{ item }&quot;&gt;
+      &lt;v-icon
+        small
+        class=&quot;mr-2&quot;
+        @click=&quot;editItem(item)&quot;
+      &gt;
+        mdi-pencil
+      &lt;/v-icon&gt;
+      &lt;v-icon
+        small
+        @click=&quot;deleteItem(item)&quot;
+      &gt;
+        mdi-delete
+      &lt;/v-icon&gt;
+    &lt;/template&gt;
+  &lt;/v-data-table&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data: () =&gt; ({
+    chosenmaterials: [],
+    materials: [],
+    requests: [],
+    rules: {
+      required: value =&gt; !!value || 'Required.',
+      requireds: [(value) =&gt; value.length &gt; 0 || 'Required.'],
+      counter30: value =&gt; value.length &lt;= 30 || 'Max 30 characters'
+    },
+    dialog: false,
+    dialogDelete: false,
+    headers: [
+      { text: 'ID', value: 'id' },
+      { text: 'Материал', value: 'material' },
+      { text: 'Заявка', value: 'req' },
+      { text: 'Цена', value: 'total_cost' },
+      { text: 'Кол-во', value: 'amount' },
+      { text: 'Действия', value: 'actions', sortable: false }
+    ],
+    editedIndex: -1,
+    editedItem: {
+      material: 0,
+      req: 0,
+      total_cost: 0,
+      amount: 0
+    },
+    defaultItem: {
+      material: 0,
+      req: 0,
+      total_cost: 0,
+      amount: 0
+    }
+  }),
+  computed: {
+    chosenmaterialsForm () {
+      return this.editedIndex === -1 ? 'Добавить выбранные материалы' : 'Изменение данных о выбранных материалах'
+    }
+  },
+  watch: {
+    dialog (val) {
+      val || this.close()
+    },
+    dialogDelete (val) {
+      val || this.closeDelete()
+    }
+  },
+  created () {
+    this.GetChosenMaterials()
+    this.GetMaterials()
+    this.GetRequests()
+  },
+
+  methods: {
+    async GetChosenMaterials () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/chosenmaterials/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.chosenmaterials = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async GetMaterials () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/materialspl/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.materials = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async GetRequests () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/request/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.requests = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async CreateChosenMaterials () {
+      try {
+        const response = await this.axios
+          .post('http://127.0.0.1:8000/ad_agency/chosenmaterials/create/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 201) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async UpdateChosenMaterials () {
+      this.editedIndex = 1
+      try {
+        const response = await this.axios
+          .put('http://127.0.0.1:8000/ad_agency/chosenmaterials/' + this.editedItem.id + '/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async DeleteChosenMaterials () {
+      this.editedIndex = 1
+      this.dialogDelete = true
+      try {
+        const response = await this.axios
+          .delete('http://127.0.0.1:8000/ad_agency/chosenmaterials/' + this.editedItem.id + '/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 204) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    editItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.editedItem.req = parseInt(this.editedItem.req.split('-')[0])
+      this.editedItem.material = this.materials.find(item =&gt; item.title === this.editedItem.material).id
+      this.dialog = true
+    },
+    deleteItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.dialogDelete = true
+    },
+
+    close () {
+      this.dialog = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+
+    closeDelete () {
+      this.dialogDelete = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+    save () {
+      if (this.editedIndex &gt; -1) {
+        this.UpdateChosenMaterials()
+      } else {
+        this.CreateChosenMaterials()
+      }
+      this.close()
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h2 id="chosenservicestablecardvue">ChosenServicesTableCard.vue</h2>
+<pre><code>&lt;template&gt;
+  &lt;v-data-table
+    :headers=&quot;headers&quot;
+    :items=&quot;chosenservices&quot;
+    class=&quot;elevation-1&quot;
+  &gt;
+    &lt;template v-slot:top&gt;
+      &lt;v-toolbar
+        flat
+      &gt;
+        &lt;v-toolbar-title&gt;Выбранные услуги&lt;/v-toolbar-title&gt;
+        &lt;v-divider
+          class=&quot;mx-4&quot;
+          inset
+          vertical
+        &gt;&lt;/v-divider&gt;
+        &lt;v-spacer&gt;&lt;/v-spacer&gt;
+        &lt;v-dialog
+          v-model=&quot;dialog&quot;
+          max-width=&quot;500px&quot;
+        &gt;
+          &lt;template v-slot:activator=&quot;{ on, attrs }&quot;&gt;
+            &lt;v-btn
+              color=&quot;primary&quot;
+              dark
+              class=&quot;mb-2&quot;
+              v-bind=&quot;attrs&quot;
+              v-on=&quot;on&quot;
+            &gt;
+              Добавить выбранные услуги
+            &lt;/v-btn&gt;
+          &lt;/template&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title&gt;
+              &lt;span class=&quot;headline&quot;&gt;{{ chosenservicesForm }}&lt;/span&gt;
+            &lt;/v-card-title&gt;
+
+            &lt;v-card-text&gt;
+              &lt;v-container&gt;
+                &lt;v-row&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-select
+                      :items=services
+                      item-text=&quot;title&quot;
+                      item-value=&quot;id&quot;
+                      label=&quot;Услуга&quot;
+                      v-model=&quot;editedItem.service&quot;
+                      :rules=&quot;rules.requireds&quot;
+                    &gt;&lt;/v-select&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-select
+                      :items=requests
+                      item-text=&quot;id&quot;
+                      item-value=&quot;id&quot;
+                      label=&quot;Заявка&quot;
+                      v-model=&quot;editedItem.req&quot;
+                      :rules=&quot;rules.requireds&quot;
+                    &gt;&lt;/v-select&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.total_cost&quot;
+                      label=&quot;Цена&quot;
+                      :rules=&quot;[rules.required, rules.counter30]&quot;
+                      type=&quot;number&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                &lt;/v-row&gt;
+              &lt;/v-container&gt;
+            &lt;/v-card-text&gt;
+
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;close&quot;
+              &gt;
+                Отмена
+              &lt;/v-btn&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;save&quot;
+              &gt;
+                Сохранить
+              &lt;/v-btn&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+        &lt;v-dialog v-model=&quot;dialogDelete&quot; max-width=&quot;500px&quot;&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title class=&quot;headline&quot;&gt;Вы уверены, что хотите удалить запись о выбранных услугах?&lt;/v-card-title&gt;
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;closeDelete&quot;&gt;Отмена&lt;/v-btn&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;DeleteChosenServices&quot;&gt;Подтвердить&lt;/v-btn&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+      &lt;/v-toolbar&gt;
+    &lt;/template&gt;
+    &lt;template v-slot:[`item.actions`]=&quot;{ item }&quot;&gt;
+      &lt;v-icon
+        small
+        class=&quot;mr-2&quot;
+        @click=&quot;editItem(item)&quot;
+      &gt;
+        mdi-pencil
+      &lt;/v-icon&gt;
+      &lt;v-icon
+        small
+        @click=&quot;deleteItem(item)&quot;
+      &gt;
+        mdi-delete
+      &lt;/v-icon&gt;
+    &lt;/template&gt;
+  &lt;/v-data-table&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data: () =&gt; ({
+    chosenservices: [],
+    services: [],
+    requests: [],
+    rules: {
+      required: value =&gt; !!value || 'Required.',
+      requireds: [(value) =&gt; value.length &gt; 0 || 'Required.'],
+      counter30: value =&gt; value.length &lt;= 30 || 'Max 30 characters'
+    },
+    dialog: false,
+    dialogDelete: false,
+    headers: [
+      { text: 'ID', value: 'id' },
+      { text: 'Услуга', value: 'service' },
+      { text: 'Заявка', value: 'req' },
+      { text: 'Цена', value: 'total_cost' },
+      { text: 'Действия', value: 'actions', sortable: false }
+    ],
+    editedIndex: -1,
+    editedItem: {
+      service: 0,
+      req: 0,
+      total_cost: 0
+    },
+    defaultItem: {
+      service: 0,
+      req: 0,
+      total_cost: 0
+    }
+  }),
+  computed: {
+    chosenservicesForm () {
+      return this.editedIndex === -1 ? 'Добавить выбранные услуги' : 'Изменение данных о выбранных услугах'
+    }
+  },
+  watch: {
+    dialog (val) {
+      val || this.close()
+    },
+    dialogDelete (val) {
+      val || this.closeDelete()
+    }
+  },
+  created () {
+    this.GetChosenServices()
+    this.GetServices()
+    this.GetRequests()
+  },
+
+  methods: {
+    async GetChosenServices () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/chosenservices/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.chosenservices = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async GetServices () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/servicespl/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.services = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async GetRequests () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/request/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.requests = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async CreateChosenServices () {
+      try {
+        const response = await this.axios
+          .post('http://127.0.0.1:8000/ad_agency/chosenservices/create/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 201) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async UpdateChosenServices () {
+      this.editedIndex = 1
+      try {
+        const response = await this.axios
+          .put('http://127.0.0.1:8000/ad_agency/chosenservices/' + this.editedItem.id + '/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async DeleteChosenServices () {
+      this.editedIndex = 1
+      this.dialogDelete = true
+      try {
+        const response = await this.axios
+          .delete('http://127.0.0.1:8000/ad_agency/chosenservices/' + this.editedItem.id + '/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 204) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    editItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.editedItem.req = parseInt(this.editedItem.req.split('-')[0])
+      this.editedItem.service = this.services.find(item =&gt; item.title === this.editedItem.service).id
+      this.dialog = true
+    },
+    deleteItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.dialogDelete = true
+    },
+
+    close () {
+      this.dialog = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+
+    closeDelete () {
+      this.dialogDelete = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+    save () {
+      if (this.editedIndex &gt; -1) {
+        this.UpdateChosenServices()
+      } else {
+        this.CreateChosenServices()
+      }
+      this.close()
+    }
+  }
+}
+&lt;/script&gt;
+
+</code></pre>
+<h2 id="clienttablecardvue">ClientTableCard.vue:</h2>
+<pre><code>&lt;template&gt;
+  &lt;v-data-table
+    :headers=&quot;headers&quot;
+    :items=&quot;chosenservices&quot;
+    class=&quot;elevation-1&quot;
+  &gt;
+    &lt;template v-slot:top&gt;
+      &lt;v-toolbar
+        flat
+      &gt;
+        &lt;v-toolbar-title&gt;Выбранные услуги&lt;/v-toolbar-title&gt;
+        &lt;v-divider
+          class=&quot;mx-4&quot;
+          inset
+          vertical
+        &gt;&lt;/v-divider&gt;
+        &lt;v-spacer&gt;&lt;/v-spacer&gt;
+        &lt;v-dialog
+          v-model=&quot;dialog&quot;
+          max-width=&quot;500px&quot;
+        &gt;
+          &lt;template v-slot:activator=&quot;{ on, attrs }&quot;&gt;
+            &lt;v-btn
+              color=&quot;primary&quot;
+              dark
+              class=&quot;mb-2&quot;
+              v-bind=&quot;attrs&quot;
+              v-on=&quot;on&quot;
+            &gt;
+              Добавить выбранные услуги
+            &lt;/v-btn&gt;
+          &lt;/template&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title&gt;
+              &lt;span class=&quot;headline&quot;&gt;{{ chosenservicesForm }}&lt;/span&gt;
+            &lt;/v-card-title&gt;
+
+            &lt;v-card-text&gt;
+              &lt;v-container&gt;
+                &lt;v-row&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-select
+                      :items=services
+                      item-text=&quot;title&quot;
+                      item-value=&quot;id&quot;
+                      label=&quot;Услуга&quot;
+                      v-model=&quot;editedItem.service&quot;
+                      :rules=&quot;rules.requireds&quot;
+                    &gt;&lt;/v-select&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-select
+                      :items=requests
+                      item-text=&quot;id&quot;
+                      item-value=&quot;id&quot;
+                      label=&quot;Заявка&quot;
+                      v-model=&quot;editedItem.req&quot;
+                      :rules=&quot;rules.requireds&quot;
+                    &gt;&lt;/v-select&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.total_cost&quot;
+                      label=&quot;Цена&quot;
+                      :rules=&quot;[rules.required, rules.counter30]&quot;
+                      type=&quot;number&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                &lt;/v-row&gt;
+              &lt;/v-container&gt;
+            &lt;/v-card-text&gt;
+
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;close&quot;
+              &gt;
+                Отмена
+              &lt;/v-btn&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;save&quot;
+              &gt;
+                Сохранить
+              &lt;/v-btn&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+        &lt;v-dialog v-model=&quot;dialogDelete&quot; max-width=&quot;500px&quot;&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title class=&quot;headline&quot;&gt;Вы уверены, что хотите удалить запись о выбранных услугах?&lt;/v-card-title&gt;
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;closeDelete&quot;&gt;Отмена&lt;/v-btn&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;DeleteChosenServices&quot;&gt;Подтвердить&lt;/v-btn&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+      &lt;/v-toolbar&gt;
+    &lt;/template&gt;
+    &lt;template v-slot:[`item.actions`]=&quot;{ item }&quot;&gt;
+      &lt;v-icon
+        small
+        class=&quot;mr-2&quot;
+        @click=&quot;editItem(item)&quot;
+      &gt;
+        mdi-pencil
+      &lt;/v-icon&gt;
+      &lt;v-icon
+        small
+        @click=&quot;deleteItem(item)&quot;
+      &gt;
+        mdi-delete
+      &lt;/v-icon&gt;
+    &lt;/template&gt;
+  &lt;/v-data-table&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data: () =&gt; ({
+    chosenservices: [],
+    services: [],
+    requests: [],
+    rules: {
+      required: value =&gt; !!value || 'Required.',
+      requireds: [(value) =&gt; value.length &gt; 0 || 'Required.'],
+      counter30: value =&gt; value.length &lt;= 30 || 'Max 30 characters'
+    },
+    dialog: false,
+    dialogDelete: false,
+    headers: [
+      { text: 'ID', value: 'id' },
+      { text: 'Услуга', value: 'service' },
+      { text: 'Заявка', value: 'req' },
+      { text: 'Цена', value: 'total_cost' },
+      { text: 'Действия', value: 'actions', sortable: false }
+    ],
+    editedIndex: -1,
+    editedItem: {
+      service: 0,
+      req: 0,
+      total_cost: 0
+    },
+    defaultItem: {
+      service: 0,
+      req: 0,
+      total_cost: 0
+    }
+  }),
+  computed: {
+    chosenservicesForm () {
+      return this.editedIndex === -1 ? 'Добавить выбранные услуги' : 'Изменение данных о выбранных услугах'
+    }
+  },
+  watch: {
+    dialog (val) {
+      val || this.close()
+    },
+    dialogDelete (val) {
+      val || this.closeDelete()
+    }
+  },
+  created () {
+    this.GetChosenServices()
+    this.GetServices()
+    this.GetRequests()
+  },
+
+  methods: {
+    async GetChosenServices () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/chosenservices/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.chosenservices = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async GetServices () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/servicespl/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.services = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async GetRequests () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/request/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.requests = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async CreateChosenServices () {
+      try {
+        const response = await this.axios
+          .post('http://127.0.0.1:8000/ad_agency/chosenservices/create/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 201) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async UpdateChosenServices () {
+      this.editedIndex = 1
+      try {
+        const response = await this.axios
+          .put('http://127.0.0.1:8000/ad_agency/chosenservices/' + this.editedItem.id + '/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async DeleteChosenServices () {
+      this.editedIndex = 1
+      this.dialogDelete = true
+      try {
+        const response = await this.axios
+          .delete('http://127.0.0.1:8000/ad_agency/chosenservices/' + this.editedItem.id + '/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 204) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    editItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.editedItem.req = parseInt(this.editedItem.req.split('-')[0])
+      this.editedItem.service = this.services.find(item =&gt; item.title === this.editedItem.service).id
+      this.dialog = true
+    },
+    deleteItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.dialogDelete = true
+    },
+
+    close () {
+      this.dialog = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+
+    closeDelete () {
+      this.dialogDelete = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+    save () {
+      if (this.editedIndex &gt; -1) {
+        this.UpdateChosenServices()
+      } else {
+        this.CreateChosenServices()
+      }
+      this.close()
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h2 id="executortablecardvue">ExecutorTableCard.vue</h2>
+<pre><code>&lt;template&gt;
+  &lt;v-data-table
+    :headers=&quot;headers&quot;
+    :items=&quot;executors&quot;
+    class=&quot;elevation-1&quot;
+  &gt;
+    &lt;template v-slot:top&gt;
+      &lt;v-toolbar
+        flat
+      &gt;
+        &lt;v-toolbar-title&gt;Исполнители&lt;/v-toolbar-title&gt;
+        &lt;v-divider
+          class=&quot;mx-4&quot;
+          inset
+          vertical
+        &gt;&lt;/v-divider&gt;
+        &lt;v-spacer&gt;&lt;/v-spacer&gt;
+        &lt;v-dialog
+          v-model=&quot;dialog&quot;
+          max-width=&quot;500px&quot;
+        &gt;
+          &lt;template v-slot:activator=&quot;{ on, attrs }&quot;&gt;
+            &lt;v-btn
+              color=&quot;primary&quot;
+              dark
+              class=&quot;mb-2&quot;
+              v-bind=&quot;attrs&quot;
+              v-on=&quot;on&quot;
+            &gt;
+              Создать нового исполнителя
+            &lt;/v-btn&gt;
+          &lt;/template&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title&gt;
+              &lt;span class=&quot;headline&quot;&gt;{{ executorForm }}&lt;/span&gt;
+            &lt;/v-card-title&gt;
+
+            &lt;v-card-text&gt;
+              &lt;v-container&gt;
+                &lt;v-row&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.full_name&quot;
+                      label=&quot;ФИО&quot;
+                      :rules=&quot;[rules.required, rules.counter50]&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.phone_num&quot;
+                      label=&quot;Телефон&quot;
+                      type=&quot;number&quot;
+                      :rules=&quot;[rules.required, rules.counter12]&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                &lt;/v-row&gt;
+              &lt;/v-container&gt;
+            &lt;/v-card-text&gt;
+
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;close&quot;
+              &gt;
+                Отмена
+              &lt;/v-btn&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;save&quot;
+              &gt;
+                Сохранить
+              &lt;/v-btn&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+        &lt;v-dialog v-model=&quot;dialogDelete&quot; max-width=&quot;500px&quot;&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title class=&quot;headline&quot;&gt;Вы уверены, что хотите удалить этого исполнителя?&lt;/v-card-title&gt;
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;closeDelete&quot;&gt;Отмена&lt;/v-btn&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;DeleteExecutor&quot;&gt;Подтвердить&lt;/v-btn&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+      &lt;/v-toolbar&gt;
+    &lt;/template&gt;
+    &lt;template v-slot:[`item.actions`]=&quot;{ item }&quot;&gt;
+      &lt;v-icon
+        small
+        class=&quot;mr-2&quot;
+        @click=&quot;editItem(item)&quot;
+      &gt;
+        mdi-pencil
+      &lt;/v-icon&gt;
+      &lt;v-icon
+        small
+        @click=&quot;deleteItem(item)&quot;
+      &gt;
+        mdi-delete
+      &lt;/v-icon&gt;
+    &lt;/template&gt;
+  &lt;/v-data-table&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data: () =&gt; ({
+    executors: [],
+    rules: {
+      required: value =&gt; !!value || 'Required.',
+      counter12: value =&gt; value.length &lt;= 12 || 'Max 12 characters',
+      counter50: value =&gt; value.length &lt;= 50 || 'Max 50 characters'
+    },
+    dialog: false,
+    dialogDelete: false,
+    headers: [
+      { text: 'ID', value: 'id' },
+      { text: 'ФИО', value: 'full_name' },
+      { text: 'Телефон', value: 'phone_num' },
+      { text: 'Действия', value: 'actions', sortable: false }
+    ],
+    editedIndex: -1,
+    editedItem: {
+      full_name: '',
+      phone_num: ''
+    },
+    defaultItem: {
+      full_name: '',
+      phone_num: ''
+    }
+  }),
+  computed: {
+    executorForm () {
+      return this.editedIndex === -1 ? 'Добавить исполнителя' : 'Изменение данных об исполнителе'
+    }
+  },
+  watch: {
+    dialog (val) {
+      val || this.close()
+    },
+    dialogDelete (val) {
+      val || this.closeDelete()
+    }
+  },
+  created () {
+    this.GetExecutors()
+  },
+
+  methods: {
+    async GetExecutors () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/executor/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.executors = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async CreateExecutor () {
+      try {
+        const response = await this.axios
+          .post('http://127.0.0.1:8000/ad_agency/executor/create/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 201) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async UpdateExecutor () {
+      this.editedIndex = 1
+      try {
+        const response = await this.axios
+          .put('http://127.0.0.1:8000/ad_agency/executor/' + this.editedItem.id + '/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async DeleteExecutor () {
+      this.editedIndex = 1
+      this.dialogDelete = true
+      try {
+        const response = await this.axios
+          .delete('http://127.0.0.1:8000/ad_agency/executor/' + this.editedItem.id + '/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 204) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    editItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.dialog = true
+    },
+    deleteItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.dialogDelete = true
+    },
+
+    close () {
+      this.dialog = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+
+    closeDelete () {
+      this.dialogDelete = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+    save () {
+      if (this.editedIndex &gt; -1) {
+        this.UpdateExecutor()
+      } else {
+        this.CreateExecutor()
+      }
+      this.close()
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h2 id="invoicetablecardvue">InvoiceTableCard.vue</h2>
+<pre><code>import socket
+from threading import Thread
+
+
+class Client:
+    def __init__(self, port):
+        self._socket = socket.socket(family=socket.AF_INET,
+                                     type=socket.SOCK_STREAM,
+                                     proto=0)
+        self._socket.connect(('127.0.0.1', port))
+
+    def get(self):
+        while True:
+            try:
+                data = self._socket.recv(1024)
+                print(data.decode('utf-8'))
+            except OSError:
+                exit()
+
+    def send(self):
+        while True:
+            message = input()
+            if message == 'покинуть':
+                self._socket.send(bytes(f'{message}', 'utf-8'))
+                self._socket.close()
+                break
+            self._socket.send(bytes(f'{message}', 'utf-8'))
+
+
+if __name__ == '__main__':
+    clint = Client(53330)
+    th_1, th_2 = Thread(target=clint.send), Thread(target=clint.get)
+    th_1.start(), th_2.start()
+</code></pre>
+<h2 id="materialspltablecardvue">MaterialsPLTableCard.vue</h2>
+<pre><code>&lt;template&gt;
+  &lt;v-data-table
+    :headers=&quot;headers&quot;
+    :items=&quot;materials&quot;
+    class=&quot;elevation-1&quot;
+  &gt;
+    &lt;template v-slot:top&gt;
+      &lt;v-toolbar
+        flat
+      &gt;
+        &lt;v-toolbar-title&gt;Прайс-лист на материалы&lt;/v-toolbar-title&gt;
+        &lt;v-divider
+          class=&quot;mx-4&quot;
+          inset
+          vertical
+        &gt;&lt;/v-divider&gt;
+        &lt;v-spacer&gt;&lt;/v-spacer&gt;
+        &lt;v-dialog
+          v-model=&quot;dialog&quot;
+          max-width=&quot;500px&quot;
+        &gt;
+          &lt;template v-slot:activator=&quot;{ on, attrs }&quot;&gt;
+            &lt;v-btn
+              color=&quot;primary&quot;
+              dark
+              class=&quot;mb-2&quot;
+              v-bind=&quot;attrs&quot;
+              v-on=&quot;on&quot;
+            &gt;
+              Добавить новый материал
+            &lt;/v-btn&gt;
+          &lt;/template&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title&gt;
+              &lt;span class=&quot;headline&quot;&gt;{{ materialForm }}&lt;/span&gt;
+            &lt;/v-card-title&gt;
+
+            &lt;v-card-text&gt;
+              &lt;v-container&gt;
+                &lt;v-row&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.title&quot;
+                      label=&quot;Название&quot;
+                      :rules=&quot;[rules.required, rules.counter50]&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.description&quot;
+                      label=&quot;Описание&quot;
+                      :rules=&quot;[rules.required, rules.counter150]&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                  &lt;v-col
+                    cols=&quot;12&quot;
+                    sm=&quot;6&quot;
+                    md=&quot;4&quot;
+                  &gt;
+                    &lt;v-text-field
+                      v-model=&quot;editedItem.price&quot;
+                      label=&quot;Цена&quot;
+                      :rules=&quot;[rules.required, rules.counter30]&quot;
+                      type=&quot;number&quot;
+                    &gt;&lt;/v-text-field&gt;
+                  &lt;/v-col&gt;
+                &lt;/v-row&gt;
+              &lt;/v-container&gt;
+            &lt;/v-card-text&gt;
+
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;close&quot;
+              &gt;
+                Отмена
+              &lt;/v-btn&gt;
+              &lt;v-btn
+                color=&quot;blue darken-1&quot;
+                text
+                @click=&quot;save&quot;
+              &gt;
+                Сохранить
+              &lt;/v-btn&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+        &lt;v-dialog v-model=&quot;dialogDelete&quot; max-width=&quot;500px&quot;&gt;
+          &lt;v-card&gt;
+            &lt;v-card-title class=&quot;headline&quot;&gt;Вы уверены, что хотите удалить этот материал?&lt;/v-card-title&gt;
+            &lt;v-card-actions&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;closeDelete&quot;&gt;Отмена&lt;/v-btn&gt;
+              &lt;v-btn color=&quot;blue darken-1&quot; text @click=&quot;DeleteMaterial&quot;&gt;Подтвердить&lt;/v-btn&gt;
+              &lt;v-spacer&gt;&lt;/v-spacer&gt;
+            &lt;/v-card-actions&gt;
+          &lt;/v-card&gt;
+        &lt;/v-dialog&gt;
+      &lt;/v-toolbar&gt;
+    &lt;/template&gt;
+    &lt;template v-slot:[`item.actions`]=&quot;{ item }&quot;&gt;
+      &lt;v-icon
+        small
+        class=&quot;mr-2&quot;
+        @click=&quot;editItem(item)&quot;
+      &gt;
+        mdi-pencil
+      &lt;/v-icon&gt;
+      &lt;v-icon
+        small
+        @click=&quot;deleteItem(item)&quot;
+      &gt;
+        mdi-delete
+      &lt;/v-icon&gt;
+    &lt;/template&gt;
+  &lt;/v-data-table&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data: () =&gt; ({
+    materials: [],
+    rules: {
+      required: value =&gt; !!value || 'Required.',
+      counter30: value =&gt; value.length &lt;= 30 || 'Max 30 characters',
+      counter50: value =&gt; value.length &lt;= 50 || 'Max 50 characters',
+      counter150: value =&gt; value.length &lt;= 150 || 'Max 150 characters'
+    },
+    dialog: false,
+    dialogDelete: false,
+    headers: [
+      { text: 'ID', value: 'id' },
+      { text: 'Название', value: 'title' },
+      { text: 'Описание', value: 'description' },
+      { text: 'Цена', value: 'price' },
+      { text: 'Действия', value: 'actions', sortable: false }
+    ],
+    editedIndex: -1,
+    editedItem: {
+      title: '',
+      description: '',
+      price: 0
+    },
+    defaultItem: {
+      title: '',
+      description: '',
+      price: 0
+    }
+  }),
+  computed: {
+    materialForm () {
+      return this.editedIndex === -1 ? 'Добавить материал' : 'Изменение данных о материале'
+    }
+  },
+  watch: {
+    dialog (val) {
+      val || this.close()
+    },
+    dialogDelete (val) {
+      val || this.closeDelete()
+    }
+  },
+  created () {
+    this.GetMaterials()
+  },
+
+  methods: {
+    async GetMaterials () {
+      try {
+        const response = await this.axios
+          .get('http://127.0.0.1:8000/ad_agency/materialspl/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        this.materials = response.data
+        return response.data
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async CreateMaterial () {
+      try {
+        const response = await this.axios
+          .post('http://127.0.0.1:8000/ad_agency/materialspl/create/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 201) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async UpdateMaterial () {
+      this.editedIndex = 1
+      try {
+        const response = await this.axios
+          .put('http://127.0.0.1:8000/ad_agency/materialspl/' + this.editedItem.id + '/', this.editedItem, { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 200) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    async DeleteMaterial () {
+      this.editedIndex = 1
+      this.dialogDelete = true
+      try {
+        const response = await this.axios
+          .delete('http://127.0.0.1:8000/ad_agency/materialspl/' + this.editedItem.id + '/', { headers: { Authorization: 'Token ' + localStorage.getItem('token') } })
+
+        if (response.status !== 204) {
+          throw new Error(response.status)
+        }
+        window.location.reload()
+      } catch (e) {
+        console.error('AN API ERROR', e)
+      }
+    },
+    editItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.dialog = true
+    },
+    deleteItem (item) {
+      this.editedIndex = 1
+      this.editedItem = Object.assign({}, item)
+      this.dialogDelete = true
+    },
+
+    close () {
+      this.dialog = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+
+    closeDelete () {
+      this.dialogDelete = false
+      this.$nextTick(() =&gt; {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+    save () {
+      if (this.editedIndex &gt; -1) {
+        this.UpdateMaterial()
+      } else {
+        this.CreateMaterial()
+      }
+      this.close()
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
