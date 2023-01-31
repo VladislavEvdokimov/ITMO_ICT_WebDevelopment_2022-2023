@@ -102,7 +102,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#loginvue" class="nav-link">LogIn.vue:</a>
+            <li class="nav-item" data-level="2"><a href="#signinvue" class="nav-link">SignIn.vue:</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -260,12 +260,6 @@ createApp(App)
             v-model=&quot;signUpForm.last_name&quot;
             :rules=&quot;rules.required&quot;
           /&gt;
-          &lt;v-select
-            :items=&quot;roles&quot;
-            label=&quot;Выберите роль&quot;
-            v-model=&quot;signUpForm.role&quot;
-            :rules=&quot;rules.required&quot;
-          &gt;&lt;/v-select&gt;
           &lt;v-text-field
             label=&quot;Введите номер телефона&quot;
             v-model=&quot;signUpForm.tel&quot;
@@ -285,10 +279,17 @@ createApp(App)
             label=&quot;Введите пароль&quot;
             v-model=&quot;signUpForm.password&quot;
             type=&quot;password&quot;
-            :rules=&quot;[rules.required, rules.counter9]&quot;
+            :rules=&quot;rules.required&quot;
           /&gt;
-          &lt;v-btn type=&quot;submit&quot; color=&quot;primary&quot; dark&gt;Зарегистрироваться&lt;/v-btn&gt;
-          &lt;p class=&quot;mt-5&quot;&gt;Уже зарегистрированы? &lt;router-link to=&quot;/signin&quot;&gt;Войти&lt;/router-link&gt;&lt;/p&gt;
+          &lt;v-layout justify-center&gt;
+                &lt;v-card-actions&gt;
+                        &lt;v-btn primary&gt;
+                        &lt;v-btn type=&quot;submit&quot; color=&quot;primary&quot; dark&gt;Зарегистрироваться&lt;/v-btn&gt;
+                              &lt;/v-btn&gt;
+                &lt;/v-card-actions&gt;
+          &lt;/v-layout&gt;
+          &lt;p class=&quot;mt-lg-5&quot;&gt;Уже зарегистрированы? &lt;router-link to=&quot;/signin&quot;&gt;Войти&lt;/router-link&gt;&lt;/p&gt;
+          &lt;p class=&quot;mt-lg-5&quot;&gt;&lt;router-link to=&quot;/&quot;&gt;На главную&lt;/router-link&gt;&lt;/p&gt;
         &lt;/v-col&gt;
       &lt;/v-row&gt;
     &lt;/v-form&gt;
@@ -310,23 +311,14 @@ export default {
       password: ''
     },
 
-    roles: ['Администратор', 'Менеджер', 'Бухгалтер'],
     rules: {
       required: value =&gt; !!value || 'Required.',
-      counter9: value =&gt; value.length &lt;= 9 || 'Min 9 characters'
     }
 
   }),
 
   methods: {
     async signUp () {
-      if (this.signUpForm.role === 'Администратор') {
-        this.signUpForm.role = 'Администратор'
-      } else if (this.signUpForm.role === 'Менеджер') {
-        this.signUpForm.role = 'Менеджер'
-      } else if (this.signUpForm.role === 'Бухгалтер') {
-        this.signUpForm.role = 'Бухгалтер'
-      }
       try {
         const response = await this.axios
           .post('http://127.0.0.1:8000/auth/users/', this.signUpForm)
@@ -337,61 +329,76 @@ export default {
         this.$refs.signUpForm.reset()
         await this.$router.push({ name: 'signin' })
       } catch (e) {
-        console.error('AN API ERROR', e)
+        console.error('ERROR', e)
       }
     }
   }
 }
 &lt;/script&gt;
+
 </code></pre>
-<h2 id="loginvue">LogIn.vue:</h2>
+<h2 id="signinvue">SignIn.vue:</h2>
 <pre><code>&lt;template&gt;
-    &lt;div&gt;
-        &lt;input v-model=&quot;login&quot; type=&quot;text&quot; placeholder=&quot;Логин&quot;/&gt;
-        &lt;input v-model=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Пароль&quot;/&gt;
-        &lt;button @click=&quot;setLogin&quot;&gt;Войти&lt;/button&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;signin&quot;&gt;
+    &lt;v-form
+      @submit.prevent=&quot;signIn&quot;
+      ref=&quot;signInForm&quot;
+      class=&quot;my-2&quot;
+    &gt;
+      &lt;v-row&gt;
+        &lt;v-col cols=&quot;3&quot; class=&quot;mx-auto&quot;&gt;
+          &lt;v-text-field
+            label=&quot;Введите имя пользователя&quot;
+            v-model=&quot;signInForm.username&quot;
+          /&gt;
+          &lt;v-text-field
+            label=&quot;Введите пароль&quot;
+            v-model=&quot;signInForm.password&quot;
+            type=&quot;password&quot;
+          /&gt;
+          &lt;v-layout justify-center&gt;
+                &lt;v-card-actions&gt;
+                        &lt;v-btn primary&gt;
+                        &lt;v-btn type=&quot;submit&quot; color=&quot;primary&quot; dark&gt;Войти&lt;/v-btn&gt;
+                              &lt;/v-btn&gt;
+                &lt;/v-card-actions&gt;
+          &lt;/v-layout&gt;
+          &lt;p class=&quot;mt-5&quot;&gt;Ещё нет аккаунта? &lt;router-link to=&quot;/signup&quot;&gt;Зарегистрироваться&lt;/router-link&gt;&lt;/p&gt;
+          &lt;p class=&quot;mt-lg-5&quot;&gt;&lt;router-link to=&quot;/&quot;&gt;На главную&lt;/router-link&gt;&lt;/p&gt;
+
+        &lt;/v-col&gt;
+      &lt;/v-row&gt;
+    &lt;/v-form&gt;
+  &lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script&gt;
-import $ from 'jquery'
-
 export default {
-  name: 'Login',
-  data () {
-    return {
-      login: '',
+  name: 'SignIn',
+
+  data: () =&gt; ({
+    signInForm: {
+      username: '',
       password: ''
     }
-  },
+  }),
+
   methods: {
-    setLogin () {
-      $.ajax({
-        url: 'http://127.0.0.1:8000/auth/token/login/',
-        type: 'POST',
-        data: {
-          username: this.login,
-          password: this.password
-        },
-        success: (response) =&gt; {
-          alert('Спасибо что Вы с нами')
-          sessionStorage.setItem('auth_token', response.data.attributes.auth_token)
-          this.$router.push({ name: 'home' })
-        },
-        error: (response) =&gt; {
-          if (response.status === 400) {
-            alert('Логин или пароль не верен')
-          }
-        }
-      })
+    async signIn () {
+      try {
+        const response = await this.axios
+          .post('http://127.0.0.1:8000/auth/token/login/', this.signInForm)
+        console.log('SIGN IN RESPONSE', response)
+        this.$refs.signInForm.reset()
+        localStorage.setItem('token', response.data.auth_token)
+        window.location = '/'
+      } catch (e) {
+        console.error('ERROR', e)
+      }
     }
   }
 }
 &lt;/script&gt;
-
-&lt;style scoped&gt;
-
-&lt;/style&gt;
 </code></pre>
 <h2 id="homepagevue">Homepage.vue</h2>
 <pre><code>&lt;template&gt;
